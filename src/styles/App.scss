@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import './reset';
+@import './colors';
+@import './header';
+
 
 $inter: 'Inter', sans-serif;
 
 body {
+    box-sizing: border-box;
     font-family: $inter;
     font-weight: normal;
 }
@@ -10,8 +15,11 @@ body {
 h1 {
     font-size: 48px;
     font-weight: 600;
+    color: $heading
 }
 
 p {
-
+    font-size: 16px;
+    font-weight: 400;
+    color: $body;
 }
