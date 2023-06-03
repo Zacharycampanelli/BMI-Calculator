@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+  html,
+body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+  footer,
+header, nav, section, main {
+  display: block;
+}
+
+  body {
+  line-height: 1;
+}
+
+  ol,
+ul {
+  list-style: none;
+}
+
+  blockquote,
+q {
+  quotes: none;
+}
+
+  blockquote:before,
+blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+  table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+  input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.header {
+  height: 70vh;
+  padding: 32px 24px;
+  border-radius: 0 0 50px 50px;
+  background: linear-gradient(to left, hsl(216, 95%, 92%), hsla(184, 95%, 92%, 0));
+  text-align: center;
+}
+.header h1 {
+  margin: 24px auto;
+}
+.header p {
+  line-height: 24px;
+}
+
+.bmi-box {
+  display: flex;
+  flex-direction: column;
+  margin: -50px 24px 0;
+  border-radius: 50px;
+  background: #fff;
+  text-align: center;
+}
+.bmi-box .unit-box {
+  display: flex;
+  flex-direction: row;
+}
+.bmi-box .unit-box .unit {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 40px;
+  padding-left: 40px;
+  transform: translateX(-15px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.bmi-box .unit-box .unit label {
+  margin-top: 20px;
+}
+.bmi-box .unit-box .unit input {
+  display: none;
+}
+.bmi-box .unit-box .unit input:checked + .circle {
+  border: none;
+  background-color: hsla(227, 92%, 58%, 0.15);
+}
+.bmi-box .unit-box .unit input:checked + .circle:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: hsl(227, 92%, 58%);
+  transform: translate(-50%, -50%);
+}
+.bmi-box .unit-box .unit .circle {
+  position: absolute;
+  top: -12%;
+  left: 0;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: hsl(215, 31%, 21%);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: hsl(215, 31%, 21%);
+}
+
+p {
+  font-weight: 400;
+  color: hsl(215, 17%, 44%);
+}/*# sourceMappingURL=App.css.map */

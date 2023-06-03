@@ -2,6 +2,7 @@
 @import './reset';
 @import './colors';
 @import './header';
+@import './bmicalculatorbox';
 
 
 $inter: 'Inter', sans-serif;
@@ -9,6 +10,7 @@ $inter: 'Inter', sans-serif;
 body {
     box-sizing: border-box;
     font-family: $inter;
+    font-size: 16px;
     font-weight: normal;
 }
 
@@ -18,8 +20,21 @@ h1 {
     color: $heading
 }
 
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $heading;
+}
+
+// h4 20px
+
 p {
-    font-size: 16px;
+    // font-size: 16px;
     font-weight: 400;
     color: $body;
 }

@@ -1,13 +1,16 @@
 import { useState } from 'react'
 
-import './styles/App.scss'
 import Header from './components/Header'
+import BMICalculatorBox from './components/BMICalculatorBox'
+
+import './styles/App.scss'
 
 function App() {
 
   return (
   <>
   <Header />
+  <BMICalculatorBox />
   </>
   )
 }
