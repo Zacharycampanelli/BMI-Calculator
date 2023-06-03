@@ -1,21 +1,26 @@
+import { useState } from "react"
+import RadioInput from "./RadioInput";
+import StatsInput from "./StatsInput";
+
 const BMICalculatorBox = () => {
+    const [unit, setUnit] = useState('metric');
+    const [weight, setWeight] = useState(0);
+    const [height, setHeight] = useState(0);
+    const updateUnitHandler = e => {
+        setUnit(e.target.value);
+    }
+
+    
+
   return (
     <div className="bmi-box">
       <h3>Enter your details below</h3>
       <div className="unit-box">
-        {/* <span> */}
-        <label htmlFor="metric"  className="unit">Metric
-        <input type="radio" id="metric" name="units" />
-        <span className="circle"></span>
-        </label>
-        {/* </span> */}
-        {/* <span > */}
-        <label htmlFor="imperial" className="unit">Imperial
-        <input type="radio" id="imperial" name="units"  />
-        <span className="circle"></span>
-        </label>
-        {/* </span> */}
+        <RadioInput unitIn="metric" setUnit={updateUnitHandler} check={unit}/>
+        <RadioInput unitIn="imperial" setUnit={updateUnitHandler} check={unit} />
+
       </div>
+        <StatsInput unit={unit} setWeight={setWeight} setHeight={setHeight} />
     </div>
   )
 }
