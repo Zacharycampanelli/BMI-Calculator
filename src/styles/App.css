@@ -136,17 +136,14 @@ blockquote:after, q:before, q:after {
   display: flex;
   flex-direction: column;
 }
-.metric-stats .metric-height,
-.metric-stats .metric-weight {
+.metric-stats .metric-height, .metric-stats .metric-weight {
   position: relative;
-}
-.metric-stats label {
   margin-bottom: 14px;
   font-size: 14px;
   color: hsl(215, 17%, 44%);
   text-align: left;
 }
-.metric-stats label input {
+.metric-stats .metric-height-input, .metric-stats .metric-weight-input {
   display: block;
   width: 100%;
   height: 69px;
@@ -157,13 +154,63 @@ blockquote:after, q:before, q:after {
   font-size: 24px;
   font-weight: 600;
 }
-.metric-stats label .metric-label {
+.metric-stats .metric-height .metric-label, .metric-stats .metric-weight .metric-label {
   position: absolute;
   top: 45px;
-  right: 24px;
+  right: 1.5rem;
   font-size: 24px;
   font-weight: 600;
   color: blue;
+}
+
+.imperial-stats {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+}
+.imperial-stats .imperial-height,
+.imperial-stats .imperial-weight {
+  display: block;
+  position: relative;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: hsl(215, 17%, 44%);
+  text-align: left;
+}
+.imperial-stats .imperial-height-input,
+.imperial-stats .imperial-weight-input {
+  position: relative;
+  display: inline-block;
+  width: 47%;
+  height: 69px;
+  margin-top: 10px;
+  padding: 24px;
+  border: 1px solid hsl(200, 24%, 88%);
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.imperial-stats .imperial-height .label-container,
+.imperial-stats .imperial-weight .label-container {
+  display: flex;
+  justify-content: space-between;
+}
+.imperial-stats .imperial-height .label-container .imperial-label,
+.imperial-stats .imperial-weight .label-container .imperial-label {
+  position: absolute;
+  top: 45px;
+  font-size: 24px;
+  font-weight: 600;
+  color: blue;
+  z-index: 1;
+}
+.imperial-stats .imperial-height .label-container #label-left,
+.imperial-stats .imperial-weight .label-container #label-left {
+  left: 5.5rem;
+}
+.imperial-stats .imperial-height .label-container #label-right,
+.imperial-stats .imperial-weight .label-container #label-right {
+  right: 1.5rem;
 }
 
 body {
