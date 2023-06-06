@@ -49,9 +49,9 @@ const ImperialStats = ({ setWeight, setHeight }) => {
       
       <label className='imperial-height'>Height<br/>
       <div className="label-container">
-        <input className='imperial-height-input' type='number' name="ft" onChange={heightHandler}/>
+        <input className='imperial-height-input' type='number' name="ft" onBlur={heightHandler}/>
         <span className='imperial-label' id="label-left">ft</span>
-        <input className='imperial-height-input' type='number' name="in" onChange={heightHandler}/>
+        <input className='imperial-height-input' type='number' name="in" onBlur={heightHandler}/>
         <span className='imperial-label' id="label-right">in</span>
         </div>
       </label>
@@ -59,9 +59,9 @@ const ImperialStats = ({ setWeight, setHeight }) => {
       <label className='imperial-weight'>Weight<br/>
       <div className="label-container">
 
-        <input className='imperial-weight-input' type='number' name="st" onChange={weightHandler}/>
+        <input className='imperial-weight-input' type='number' name="st" onBlur={weightHandler}/>
         <span className='imperial-label'  id="label-left">st</span>
-        <input className='imperial-weight-input' type='number' name="lbs" onChange={weightHandler}/>
+        <input className='imperial-weight-input' type='number' name="lbs" onBlur={weightHandler}/>
         <span className='imperial-label' id="label-right">lbs</span>
       </div>
       </label>
