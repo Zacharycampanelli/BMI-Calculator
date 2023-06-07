@@ -7,6 +7,7 @@ const BMICalculatorBox = () => {
   const [unit, setUnit] = useState('metric');
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
+
   const updateUnitHandler = (e) => {
     setUnit(e.target.value);
   };
@@ -18,7 +19,7 @@ const BMICalculatorBox = () => {
         <RadioInput unitIn="metric" setUnit={updateUnitHandler} check={unit} />
         <RadioInput unitIn="imperial" setUnit={updateUnitHandler} check={unit} />
       </div>
-      <StatsInput unit={unit} setWeight={setWeight} setHeight={setHeight} />
+      <StatsInput unit={unit} setWeight={setWeight} setHeight={setHeight} height={height} weight={weight} />
       <BMIScoreBox weight={weight} height={height} unit={unit} />
     </div>
   );

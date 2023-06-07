@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const ImperialStats = ({ setWeight, setHeight }) => {
+const ImperialStats = ({ setWeight, setHeight, weight, height }) => {
     const [imperialHeight, setImperialHeight] = useState({
       ft: 0,
       in: 0
