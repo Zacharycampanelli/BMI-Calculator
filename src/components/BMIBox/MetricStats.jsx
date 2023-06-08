@@ -3,10 +3,13 @@ import React from 'react'
 const MetricStats = ({ setWeight, setHeight, weight, height }) => {
     
     const inputHeightHandler = e => {
-        setHeight(e.target.value)
+      let tempHeight = parseInt(e.target.value);
+      tempHeight = tempHeight / 100;
+      console.log(tempHeight)
+        setHeight(tempHeight)
     }
     const inputWeightHandler = e => {
-        setWeight(e.target.value)
+        setWeight(parseInt(e.target.value))
     }
 
   return (

@@ -3,14 +3,16 @@ import { useState, useEffect } from 'react';
 
 const BMIScoreBox = ({ weight, height, unit }) => {
   const [BMI, setBMI] = useState(0);
-  let [weightStatus, setWeightStatus]  = useState(0);
-  let [lowerRange, setLowerRange] = useState(0)
-  let [upperRange, setUpperRange] = useState(0)
+  const [weightStatus, setWeightStatus]  = useState(0);
+  const [lowerRange, setLowerRange] = useState(0)
+  const [upperRange, setUpperRange] = useState(0)
   let tempBMI =  0;
 
   const convertWeight = (weight, unit) => {
    let tempWeight
-    if (unit === 'metric'){} 
+    if (unit === 'metric'){
+      console.log(weight)
+    } 
     else if (unit === 'imperial') {
         let tempStones = (weight / 14).toFixed(0) 
         let tempLbs =  (weight % 14).toFixed(0) 
@@ -30,16 +32,21 @@ const BMIScoreBox = ({ weight, height, unit }) => {
 
         lowerBase = lowerLimit * (height ** 2) 
         upperBase = upperLimit * (height ** 2) 
-    
+    console.log(lowerBase, upperBase)
     if (unit === 'imperial') {
         lowerBase = lowerBase / 703
         upperBase = upperBase / 703
+     lowerBase = convertWeight(lowerBase.toFixed(1), 'imperial')
+     upperBase = convertWeight(upperBase.toFixed(1), 'imperial')
+       }
+
+       if (unit === 'metric') {
+        lowerBase = convertWeight(lowerBase.toFixed(1), 'metric')
+        upperBase = convertWeight(upperBase.toFixed(1), 'metric')
        }
 
        console.log(lowerBase)
        console.log(upperBase)
-     lowerBase = convertWeight(lowerBase.toFixed(1), 'imperial')
-     upperBase = convertWeight(upperBase.toFixed(1), 'imperial')
        setLowerRange(lowerBase);
        setUpperRange(upperBase)
     }
@@ -54,10 +61,12 @@ const BMIScoreBox = ({ weight, height, unit }) => {
   useEffect(() => {
     if (unit === 'metric') {
       tempBMI = weight / (height) ** 2;
+          console.log("t" + tempBMI)
+
     } else if (unit === 'imperial') {
       tempBMI = 703 * (weight / height ** 2);
     }
-    tempBMI = parseInt(tempBMI.toFixed(1))
+    tempBMI = tempBMI.toFixed(1)
     setBMI(tempBMI)
     getWeightStatus(tempBMI)
     getWeightRange( height, unit)
