@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-const BMIScoreBox = ({ weight, height, unit }) => {
-  const [BMI, setBMI] = useState(0);
+const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
   const [weightStatus, setWeightStatus]  = useState(0);
   const [lowerRange, setLowerRange] = useState(0)
   const [upperRange, setUpperRange] = useState(0)
@@ -58,6 +57,7 @@ const BMIScoreBox = ({ weight, height, unit }) => {
     if (30 <= bmi) return setWeightStatus('obese')
   }
 
+  // Move to imperial/metric
   useEffect(() => {
     if (unit === 'metric') {
       tempBMI = weight / (height) ** 2;
@@ -75,6 +75,7 @@ const BMIScoreBox = ({ weight, height, unit }) => {
   return <div className='bmi-score-card'>
     Your BMI is... 
     <span className='score'>
+      {/* Make bmi call */}
         {BMI}
         </span>
         <p>

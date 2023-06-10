@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MetricStats = ({ setWeight, setHeight, weight, height }) => {
+const MetricStats = ({ setWeight, setHeight, weight, height, BMI, setBMI }) => {
     
     const inputHeightHandler = e => {
       let tempHeight = parseInt(e.target.value);
