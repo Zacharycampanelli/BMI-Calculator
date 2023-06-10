@@ -2,19 +2,24 @@ import { useState, useEffect } from 'react';
 
 
 const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
-  const [weightStatus, setWeightStatus]  = useState(0);
-  const [lowerRange, setLowerRange] = useState(0)
-  const [upperRange, setUpperRange] = useState(0)
+  const [weightStatus, setWeightStatus]  = useState('');
+  const [range, setRange] = useState({
+    lower: 0,
+    upper: 0
+  })
+ 
   let tempBMI =  0;
 
   const convertWeight = (weight, unit) => {
    let tempWeight
     if (unit === 'metric'){
-      console.log(weight)
+      tempWeight = weight.toFixed(1);
+      tempWeight = tempWeight + ' kgs '  
+
     } 
     else if (unit === 'imperial') {
-        let tempStones = (weight / 14).toFixed(0) 
-        let tempLbs =  (weight % 14).toFixed(0) 
+        let tempStones = (weight / 14).toFixed(1) 
+        let tempLbs =  (weight % 14).toFixed(1) 
         while (tempLbs > 13) {
             tempLbs--;
             tempStones++;
@@ -28,26 +33,26 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     let lowerLimit = 18.5
     let upperLimit = 24.9
     let lowerBase, upperBase;
-
-        lowerBase = lowerLimit * (height ** 2) 
-        upperBase = upperLimit * (height ** 2) 
+    lowerBase = lowerLimit * (height ** 2) 
+    upperBase = upperLimit * (height ** 2) 
     console.log(lowerBase, upperBase)
     if (unit === 'imperial') {
         lowerBase = lowerBase / 703
         upperBase = upperBase / 703
-     lowerBase = convertWeight(lowerBase.toFixed(1), 'imperial')
-     upperBase = convertWeight(upperBase.toFixed(1), 'imperial')
+     lowerBase = convertWeight(lowerBase, 'imperial')
+     upperBase = convertWeight(upperBase, 'imperial')
        }
 
        if (unit === 'metric') {
-        lowerBase = convertWeight(lowerBase.toFixed(1), 'metric')
-        upperBase = convertWeight(upperBase.toFixed(1), 'metric')
+        console.log('yas')
+        lowerBase = convertWeight(lowerBase, 'metric')
+        upperBase = convertWeight(upperBase, 'metric')
        }
 
        console.log(lowerBase)
        console.log(upperBase)
-       setLowerRange(lowerBase);
-       setUpperRange(upperBase)
+       setRange({lower: lowerBase, upper: upperBase});
+      
     }
 
   const getWeightStatus = (bmi) => {
@@ -66,16 +71,15 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     } else if (unit === 'imperial') {
       tempBMI = 703 * (weight / height ** 2);
     }
-    tempBMI = tempBMI.toFixed(1)
+    tempBMI = Number(tempBMI.toFixed(1))
     setBMI(tempBMI)
-    getWeightStatus(tempBMI)
     getWeightRange( height, unit)
+    getWeightStatus(BMI)
   }, [weight, height, unit]);
 
   return <div className='bmi-score-card'>
     Your BMI is... 
     <span className='score'>
-      {/* Make bmi call */}
         {BMI}
         </span>
         <p>
@@ -83,7 +87,7 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
         Your BMI suggests you're {weightStatus}. 
   Your ideal weight is between  
   <span className='range'> 
-    {' ' + `${lowerRange} - ${upperRange}`}.
+    {' ' + `${range.lower} - ${range.upper}`}.
     </span>
          </p>
     </div>;
