@@ -1,0 +1,19 @@
+#manEating {
+    width: 100vw;
+    border-radius: 32px;
+}
+
+.whatsItMean{
+    margin: 24px;
+
+    p {
+        margin-top: 32px;
+        line-height: 24px;
+    }
+}
+
+.requirements {
+    margin-top: 112px;
+    background: linear-gradient(to left, $meaning-gradient-start, $meaning-gradient-end);
+}
+

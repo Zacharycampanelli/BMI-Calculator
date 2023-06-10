@@ -1,8 +1,6 @@
-import { useState } from 'react';
-
 import Header from './components/Header';
 import BMICalculatorBox from './components/BMIBox/BMICalculatorBox';
-
+import Meaning from './components/Meaning'
 import './styles/App.scss';
 
 function App() {
@@ -10,6 +8,7 @@ function App() {
     <>
       <Header />
       <BMICalculatorBox />
+      <Meaning />
     </>
   );
 }
