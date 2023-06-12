@@ -1,22 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const ImperialStats = ({ setWeight, setHeight }) => {
-
   const [measurements, setMeasurements] = useState({
     inches: 0,
     feet: 0,
     pounds: 0,
-    stones: 0
-  })
-
+    stones: 0,
+  });
 
   const convertHeight = () => {
-      const convertedFeet = measurements.feet;
-      const convertedInches = measurements.inches;
-      const total = convertedFeet * 12 + convertedInches;
-      setHeight(total);
-    }
-  
+    const convertedFeet = measurements.feet;
+    const convertedInches = measurements.inches;
+    const total = convertedFeet * 12 + convertedInches;
+    setHeight(total);
+  };
 
   const convertWeight = () => {
     const convertedStones = parseInt(measurements.stones);
@@ -25,37 +22,36 @@ const ImperialStats = ({ setWeight, setHeight }) => {
     setWeight(total);
   };
 
-
   const feetChangeHandler = (e) => {
-    const name = e.target.name
+    const name = e.target.name;
     const feetValue = Number(e.target.value);
-    console.log(name, feetValue)
-    setMeasurements({...measurements, feet: feetValue})
-  }
+    console.log(name, feetValue);
+    setMeasurements({ ...measurements, feet: feetValue });
+  };
   const inchesChangeHandler = (e) => {
-    const name = e.target.name
+    const name = e.target.name;
     const inchValue = Number(e.target.value);
-    console.log(name, inchValue)
-    setMeasurements({...measurements, inches: inchValue})
-  }
+    console.log(name, inchValue);
+    setMeasurements({ ...measurements, inches: inchValue });
+  };
 
   const stonesChangeHandler = (e) => {
-    const name = e.target.name
+    const name = e.target.name;
     const stoneValue = Number(e.target.value);
-    console.log(name, stoneValue)
-    setMeasurements({...measurements, stones: stoneValue})
-  }
+    console.log(name, stoneValue);
+    setMeasurements({ ...measurements, stones: stoneValue });
+  };
   const poundsChangeHandler = (e) => {
-    const name = e.target.name
+    const name = e.target.name;
     const poundsValue = Number(e.target.value);
-    console.log(name, poundsValue)
-    setMeasurements({...measurements, pounds: poundsValue})
-  }
+    console.log(name, poundsValue);
+    setMeasurements({ ...measurements, pounds: poundsValue });
+  };
 
   useEffect(() => {
-    convertHeight()    
-    convertWeight()
-  }, [measurements])
+    convertHeight();
+    convertWeight();
+  }, [measurements]);
 
   return (
     <div className="imperial-stats">
@@ -74,16 +70,15 @@ const ImperialStats = ({ setWeight, setHeight }) => {
         </div>
       </label>
 
-
       <label className="imperial-weight">
         Weight
         <br />
         <div className="label-container">
-          <input className="imperial-weight-input" type="number" name="stones" onChange={stonesChangeHandler}  />
+          <input className="imperial-weight-input" type="number" name="stones" onChange={stonesChangeHandler} />
           <span className="imperial-label" id="label-left">
             st
           </span>
-          <input className="imperial-weight-input" type="number" name="pounds" onChange={poundsChangeHandler}   />
+          <input className="imperial-weight-input" type="number" name="pounds" onChange={poundsChangeHandler} />
           <span className="imperial-label" id="label-right">
             lbs
           </span>

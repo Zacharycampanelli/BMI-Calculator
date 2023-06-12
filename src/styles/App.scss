@@ -9,6 +9,8 @@
 @import './bmiscorebox';
 @import './meaning';
 @import './requirements';
+@import './limitations.scss';
+@import './limit';
 
 $inter: 'Inter', sans-serif;
 
@@ -36,10 +38,15 @@ h3 {
     color: $heading;
 }
 
-// h4 20px
+h4 {
+    font-size:20px;
+    font-weight: 600;
+    color: $heading;
+}
 
 p {
     // font-size: 16px;
     font-weight: 400;
     color: $body;
+    line-height: 24px;
 }

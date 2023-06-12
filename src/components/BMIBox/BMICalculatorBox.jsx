@@ -20,7 +20,15 @@ const BMICalculatorBox = () => {
         <RadioInput unitIn="metric" setUnit={updateUnitHandler} check={unit} />
         <RadioInput unitIn="imperial" setUnit={updateUnitHandler} check={unit} />
       </div>
-      <StatsInput unit={unit} setWeight={setWeight} setHeight={setHeight} height={height} weight={weight}  BMI={BMI} setBMI={setBMI}/>
+      <StatsInput
+        unit={unit}
+        setWeight={setWeight}
+        setHeight={setHeight}
+        height={height}
+        weight={weight}
+        BMI={BMI}
+        setBMI={setBMI}
+      />
       <BMIScoreBox weight={weight} height={height} unit={unit} BMI={BMI} setBMI={setBMI} />
     </div>
   );

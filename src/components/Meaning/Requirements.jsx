@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Requirements = ({ requirement, description, icon}) => {
   return (
     <div className='requirement'>
