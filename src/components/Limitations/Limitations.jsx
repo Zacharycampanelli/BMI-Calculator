@@ -45,7 +45,7 @@ const Limitations = () => {
         to use.
       </p>
 
-      {limitations.map((limit) => <Limit limit={limit.limit} description={limit.description} image={limit.image}  />)}
+      {limitations.map((limit) => <Limit limit={limit.limit} description={limit.description} image={limit.image} key={limit.limit} />)}
     </div>
   );
 };

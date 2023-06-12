@@ -1,13 +1,14 @@
 .bmi-box {
- 
+  position: relative;
  display: flex;
   flex-direction: column;
-  margin: -110px 20px 72px;
+  margin: -12em 20px 72px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
   background: #fff;
   text-align: center;
+  
 
   h3 {
     margin-bottom: 18px;

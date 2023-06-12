@@ -1,9 +1,11 @@
 .header {
-    height: 80vh;
+    position: relative;
+    height: 45rem;
     padding: 32px 24px;
     border-radius: 0 0 50px 50px;
     background: linear-gradient(to left, $gradient-start, $gradient-end);
     text-align: center;  
+
     h1 {
         margin: 24px auto;
     }

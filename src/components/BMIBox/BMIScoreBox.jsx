@@ -52,14 +52,18 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
   };
 
   const getWeightStatus = (bmi) => {
+    console.log('status ' + typeof bmi)
     if (bmi < 18.5) return setWeightStatus('underweight');
-    if (18.5 <= bmi < 24.9) return setWeightStatus('a healthy weight');
-    if (25 <= bmi < 29.9) return setWeightStatus('overweight');
+    if (bmi < 24.9) return setWeightStatus('a healthy weight');
+    if (bmi < 29.9) return setWeightStatus('overweight');
     if (30 <= bmi) return setWeightStatus('obese');
   };
 
   // Move to imperial/metric
   useEffect(() => {
+    if (weight !== 0 && height !== 0) {
+
+    
     if (unit === 'metric') {
       tempBMI = weight / height ** 2;
       console.log('t' + tempBMI);
@@ -67,9 +71,11 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
       tempBMI = 703 * (weight / height ** 2);
     }
     tempBMI = Number(tempBMI.toFixed(1));
+    console.log(tempBMI)
     setBMI(tempBMI);
     getWeightRange(height, unit);
     getWeightStatus(BMI);
+  }
   }, [weight, height, unit]);
 
   return (

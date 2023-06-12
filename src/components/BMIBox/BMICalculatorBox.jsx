@@ -7,7 +7,7 @@ const BMICalculatorBox = () => {
   const [unit, setUnit] = useState('metric');
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
-  const [BMI, setBMI] = useState(0);
+  const [BMI, setBMI] = useState(0.0);
 
   const updateUnitHandler = (e) => {
     setUnit(e.target.value);
