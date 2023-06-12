@@ -15,8 +15,8 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
       tempWeight = weight.toFixed(1);
       tempWeight = tempWeight + ' kgs ';
     } else if (unit === 'imperial') {
-      let tempStones = (weight / 14).toFixed(1);
-      let tempLbs = (weight % 14).toFixed(1);
+      let tempStones = Math.floor(weight / 14);
+      let tempLbs = Math.floor(weight % 14);
       while (tempLbs > 13) {
         tempLbs--;
         tempStones++;
@@ -29,9 +29,8 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
   const getWeightRange = (height, unit) => {
     let lowerLimit = 18.5;
     let upperLimit = 24.9;
-    let lowerBase, upperBase;
-    lowerBase = lowerLimit * height ** 2;
-    upperBase = upperLimit * height ** 2;
+    let lowerBase = lowerLimit * height ** 2;
+    let upperBase = upperLimit * height ** 2;
     console.log(lowerBase, upperBase);
     if (unit === 'imperial') {
       lowerBase = lowerBase / 703;
@@ -41,7 +40,6 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     }
 
     if (unit === 'metric') {
-      console.log('yas');
       lowerBase = convertWeight(lowerBase, 'metric');
       upperBase = convertWeight(upperBase, 'metric');
     }
