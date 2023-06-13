@@ -25,26 +25,22 @@ const ImperialStats = ({ setWeight, setHeight }) => {
   const feetChangeHandler = (e) => {
     const name = e.target.name;
     const feetValue = Number(e.target.value);
-    console.log(name, feetValue);
     setMeasurements({ ...measurements, feet: feetValue });
   };
   const inchesChangeHandler = (e) => {
     const name = e.target.name;
     const inchValue = Number(e.target.value);
-    console.log(name, inchValue);
     setMeasurements({ ...measurements, inches: inchValue });
   };
 
   const stonesChangeHandler = (e) => {
     const name = e.target.name;
     const stoneValue = Number(e.target.value);
-    console.log(name, stoneValue);
     setMeasurements({ ...measurements, stones: stoneValue });
   };
   const poundsChangeHandler = (e) => {
     const name = e.target.name;
     const poundsValue = Number(e.target.value);
-    console.log(name, poundsValue);
     setMeasurements({ ...measurements, pounds: poundsValue });
   };
 

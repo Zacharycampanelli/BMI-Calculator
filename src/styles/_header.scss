@@ -13,4 +13,8 @@
     p{
         line-height: 24px;
     }
+
+    @include min-width(medium) {
+        height: 42rem;
+    }
 }

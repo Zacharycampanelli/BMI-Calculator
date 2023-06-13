@@ -1,6 +1,6 @@
 .bmi-box {
   position: relative;
- display: flex;
+  display: flex;
   flex-direction: column;
   margin: -12em 20px 72px;
   padding: 20px;
@@ -12,13 +12,27 @@
 
   h3 {
     margin-bottom: 18px;
+
+    @include min-width(medium) {
+      text-align: left;
+    }
   }
 
   .unit-box {
     display: flex;
     flex-direction: row;
     margin-bottom: 18px;
-}
+    
+    @include min-width(medium) {
+      justify-content: space-between;
+      margin-right : 23%;
+    }
+  }
+
+  @include min-width(medium) {
+    margin: -18rem 40px 72px
+  }
+
 }
 
     

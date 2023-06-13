@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import './reset';
 @import './colors';
+@import './media';
 @import './header';
 @import './bmicalculatorbox';
 @import './radioinput';
@@ -24,7 +25,11 @@ body {
 h1 {
     font-size: 48px;
     font-weight: 600;
-    color: $heading
+    color: $heading;
+
+    @include min-width(medium) {
+        max-width: 54%;
+    }
 }
 
 h2 {

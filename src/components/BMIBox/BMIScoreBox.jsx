@@ -31,7 +31,6 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     let upperLimit = 24.9;
     let lowerBase = lowerLimit * height ** 2;
     let upperBase = upperLimit * height ** 2;
-    console.log(lowerBase, upperBase);
     if (unit === 'imperial') {
       lowerBase = lowerBase / 703;
       upperBase = upperBase / 703;
@@ -44,13 +43,10 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
       upperBase = convertWeight(upperBase, 'metric');
     }
 
-    console.log(lowerBase);
-    console.log(upperBase);
     setRange({ lower: lowerBase, upper: upperBase });
   };
 
   const getWeightStatus = (bmi) => {
-    console.log('status ' + typeof bmi)
     if (bmi < 18.5) return setWeightStatus('underweight');
     if (bmi < 24.9) return setWeightStatus('a healthy weight');
     if (bmi < 29.9) return setWeightStatus('overweight');
@@ -64,12 +60,10 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     
     if (unit === 'metric') {
       tempBMI = weight / height ** 2;
-      console.log('t' + tempBMI);
     } else if (unit === 'imperial') {
       tempBMI = 703 * (weight / height ** 2);
     }
     tempBMI = Number(tempBMI.toFixed(1));
-    console.log(tempBMI)
     setBMI(tempBMI);
     getWeightRange(height, unit);
     getWeightStatus(BMI);
@@ -80,7 +74,7 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     <div className="bmi-score-card">
       Your BMI is...
       <span className="score">{BMI}</span>
-      <p>
+      <p className='status-range'>
         Your BMI suggests you're {weightStatus}. Your ideal weight is between
         <span className="range">{' ' + `${range.lower} - ${range.upper}`}.</span>
       </p>

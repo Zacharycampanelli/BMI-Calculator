@@ -68,6 +68,11 @@ blockquote:after, q:before, q:after {
 .header p {
   line-height: 24px;
 }
+@media (min-width: 768px) {
+  .header {
+    height: 42rem;
+  }
+}
 
 .bmi-box {
   position: relative;
@@ -83,10 +88,26 @@ blockquote:after, q:before, q:after {
 .bmi-box h3 {
   margin-bottom: 18px;
 }
+@media (min-width: 768px) {
+  .bmi-box h3 {
+    text-align: left;
+  }
+}
 .bmi-box .unit-box {
   display: flex;
   flex-direction: row;
   margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .bmi-box .unit-box {
+    justify-content: space-between;
+    margin-right: 23%;
+  }
+}
+@media (min-width: 768px) {
+  .bmi-box {
+    margin: -18rem 40px 72px;
+  }
 }
 
 .unit {
@@ -139,6 +160,12 @@ blockquote:after, q:before, q:after {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .metric-stats {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 .metric-stats .metric-height, .metric-stats .metric-weight {
   position: relative;
   margin-bottom: 14px;
@@ -157,6 +184,12 @@ blockquote:after, q:before, q:after {
   font-size: 24px;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .metric-stats .metric-height-input, .metric-stats .metric-weight-input {
+    width: 95%;
+    padding: 15px;
+  }
+}
 .metric-stats .metric-height .metric-label, .metric-stats .metric-weight .metric-label {
   position: absolute;
   top: 45px;
@@ -164,6 +197,11 @@ blockquote:after, q:before, q:after {
   font-size: 24px;
   font-weight: 600;
   color: blue;
+}
+@media (min-width: 768px) {
+  .metric-stats .metric-height .metric-label, .metric-stats .metric-weight .metric-label {
+    right: 4rem;
+  }
 }
 
 .imperial-stats {
@@ -225,15 +263,35 @@ blockquote:after, q:before, q:after {
   color: #fff;
   text-align: left;
 }
+@media (min-width: 768px) {
+  .bmi-score-card {
+    position: relative;
+    height: 140px;
+    border-radius: 16px 85px 85px 16px;
+  }
+}
 .bmi-score-card .score {
   display: block;
   font-size: 48px;
+}
+@media (min-width: 768px) {
+  .bmi-score-card .score {
+    position: absolute;
+  }
 }
 .bmi-score-card p {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
   line-height: 21px;
+}
+@media (min-width: 768px) {
+  .bmi-score-card .status-range {
+    position: absolute;
+    left: 50%;
+    right: 5%;
+    top: 30%;
+  }
 }
 .bmi-score-card .range {
   font-weight: 600;
@@ -307,6 +365,11 @@ h1 {
   font-size: 48px;
   font-weight: 600;
   color: hsl(215, 31%, 21%);
+}
+@media (min-width: 768px) {
+  h1 {
+    max-width: 54%;
+  }
 }
 
 h2 {

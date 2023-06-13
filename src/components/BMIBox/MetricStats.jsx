@@ -4,7 +4,6 @@ const MetricStats = ({ setWeight, setHeight }) => {
   const inputHeightHandler = (e) => {
     let tempHeight = parseInt(e.target.value);
     tempHeight = tempHeight / 100;
-    console.log(tempHeight);
     setHeight(tempHeight);
   };
   const inputWeightHandler = (e) => {
