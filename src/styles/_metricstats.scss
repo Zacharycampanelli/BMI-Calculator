@@ -4,7 +4,9 @@
 
   @include min-width(medium) {
     flex-direction: row;
-    justify-content: space-evenly ;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
   }
 
 
@@ -15,7 +17,14 @@
     color: $body;
     text-align: left;
 
+    p {
+      @include min-width(medium) {
+        margin: 1rem;
+      }
 
+
+
+    }
 
     &-input {
       display: block;
@@ -29,22 +38,24 @@
       font-weight: 600;
 
       @include min-width(medium) {
-        width: 95%; 
+        margin: 10px auto 0;
         padding: 15px;
+        width: 92%; 
         
       }
     }
 
     .metric-label {
       position: absolute;
-      top: 45px;
+      top: 48px;
       right: 1.5rem;
       font-size: 24px;
       font-weight: 600;
       color: blue;
 
       @include min-width(medium) {
-        right: 4rem;
+        top: 75px;
+        right: 2rem;
       }
     }
   }

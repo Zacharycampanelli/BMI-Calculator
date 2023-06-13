@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-items: space-between;
+
+  @include min-width(medium) {
+    margin: 0 auto;
+    width: 95%;
+  }
+  
   .imperial-height,
   .imperial-weight {
     display: block;
@@ -10,6 +16,7 @@
     font-size: 14px;
     color: $body;
     text-align: left;
+
     &-input {
       position: relative;
       display: inline-block;
@@ -21,6 +28,10 @@
       border-radius: 12px;
       font-size: 24px;
       font-weight: 600;
+
+      @include min-width(medium) {
+        width: 46%;
+      }
     }
 
     .label-container {
@@ -34,10 +45,18 @@
         font-weight: 600;
         color: blue;
         z-index: 1;
+
+        @include min-width(medium) {
+          top: 52px;
+        }
       }
 
       #label-left {
-        left: 5.5rem;
+        left: 6rem;
+
+        @include min-width(medium) {
+          left: 14.5rem
+        }
       }
 
       #label-right {

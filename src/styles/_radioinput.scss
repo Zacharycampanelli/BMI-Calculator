@@ -9,6 +9,10 @@
     user-select: none;
     cursor: pointer;
 
+    @include min-width(medium) {
+      margin: 0 40px;
+    }
+
     label {
       margin-top: 20px;
     }

@@ -13,12 +13,12 @@ const MetricStats = ({ setWeight, setHeight }) => {
   return (
     <div className="metric-stats">
       <label className="metric-height">
-        Height
+        <p>Height</p>
         <input className="metric-height-input" type="number" onChange={inputHeightHandler} />
         <span className="metric-label">cm</span>
       </label>
       <label className="metric-weight">
-        Weight
+        <p>Weight</p>
         <input className="metric-weight-input" type="number" onChange={inputWeightHandler} />
         <span className="metric-label">kg</span>
       </label>

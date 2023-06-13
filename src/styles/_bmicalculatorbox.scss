@@ -11,10 +11,12 @@
   
 
   h3 {
+    margin-left: 1rem;
     margin-bottom: 18px;
 
     @include min-width(medium) {
       text-align: left;
+      margin-bottom: 2.5rem
     }
   }
 
@@ -25,7 +27,8 @@
     
     @include min-width(medium) {
       justify-content: space-between;
-      margin-right : 23%;
+      margin-left: 2%;
+      margin-right : 19%;
     }
   }
 

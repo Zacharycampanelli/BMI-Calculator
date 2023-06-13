@@ -86,11 +86,13 @@ blockquote:after, q:before, q:after {
   text-align: center;
 }
 .bmi-box h3 {
+  margin-left: 1rem;
   margin-bottom: 18px;
 }
 @media (min-width: 768px) {
   .bmi-box h3 {
     text-align: left;
+    margin-bottom: 2.5rem;
   }
 }
 .bmi-box .unit-box {
@@ -101,7 +103,8 @@ blockquote:after, q:before, q:after {
 @media (min-width: 768px) {
   .bmi-box .unit-box {
     justify-content: space-between;
-    margin-right: 23%;
+    margin-left: 2%;
+    margin-right: 19%;
   }
 }
 @media (min-width: 768px) {
@@ -122,6 +125,11 @@ blockquote:after, q:before, q:after {
      -moz-user-select: none;
           user-select: none;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .unit {
+    margin: 0 40px;
+  }
 }
 .unit label {
   margin-top: 20px;
@@ -163,7 +171,9 @@ blockquote:after, q:before, q:after {
 @media (min-width: 768px) {
   .metric-stats {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 .metric-stats .metric-height, .metric-stats .metric-weight {
@@ -172,6 +182,11 @@ blockquote:after, q:before, q:after {
   font-size: 14px;
   color: hsl(215, 17%, 44%);
   text-align: left;
+}
+@media (min-width: 768px) {
+  .metric-stats .metric-height p, .metric-stats .metric-weight p {
+    margin: 1rem;
+  }
 }
 .metric-stats .metric-height-input, .metric-stats .metric-weight-input {
   display: block;
@@ -186,13 +201,14 @@ blockquote:after, q:before, q:after {
 }
 @media (min-width: 768px) {
   .metric-stats .metric-height-input, .metric-stats .metric-weight-input {
-    width: 95%;
+    margin: 10px auto 0;
     padding: 15px;
+    width: 92%;
   }
 }
 .metric-stats .metric-height .metric-label, .metric-stats .metric-weight .metric-label {
   position: absolute;
-  top: 45px;
+  top: 48px;
   right: 1.5rem;
   font-size: 24px;
   font-weight: 600;
@@ -200,7 +216,8 @@ blockquote:after, q:before, q:after {
 }
 @media (min-width: 768px) {
   .metric-stats .metric-height .metric-label, .metric-stats .metric-weight .metric-label {
-    right: 4rem;
+    top: 75px;
+    right: 2rem;
   }
 }
 
@@ -208,6 +225,12 @@ blockquote:after, q:before, q:after {
   display: flex;
   flex-direction: column;
   justify-items: space-between;
+}
+@media (min-width: 768px) {
+  .imperial-stats {
+    margin: 0 auto;
+    width: 95%;
+  }
 }
 .imperial-stats .imperial-height,
 .imperial-stats .imperial-weight {
@@ -231,6 +254,12 @@ blockquote:after, q:before, q:after {
   font-size: 24px;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .imperial-stats .imperial-height-input,
+  .imperial-stats .imperial-weight-input {
+    width: 46%;
+  }
+}
 .imperial-stats .imperial-height .label-container,
 .imperial-stats .imperial-weight .label-container {
   display: flex;
@@ -245,9 +274,21 @@ blockquote:after, q:before, q:after {
   color: blue;
   z-index: 1;
 }
+@media (min-width: 768px) {
+  .imperial-stats .imperial-height .label-container .imperial-label,
+  .imperial-stats .imperial-weight .label-container .imperial-label {
+    top: 52px;
+  }
+}
 .imperial-stats .imperial-height .label-container #label-left,
 .imperial-stats .imperial-weight .label-container #label-left {
-  left: 5.5rem;
+  left: 6rem;
+}
+@media (min-width: 768px) {
+  .imperial-stats .imperial-height .label-container #label-left,
+  .imperial-stats .imperial-weight .label-container #label-left {
+    left: 14.5rem;
+  }
 }
 .imperial-stats .imperial-height .label-container #label-right,
 .imperial-stats .imperial-weight .label-container #label-right {
@@ -255,13 +296,14 @@ blockquote:after, q:before, q:after {
 }
 
 .bmi-score-card {
-  margin: 10px;
+  margin: 10px auto;
   padding: 32px 55px 32px 32px;
   border-radius: 16px;
   background: linear-gradient(hsl(227, 92%, 58%), hsl(227, 100%, 67%));
   font-weight: 600;
   color: #fff;
   text-align: left;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .bmi-score-card {

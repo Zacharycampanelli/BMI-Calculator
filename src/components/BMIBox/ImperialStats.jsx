@@ -52,8 +52,7 @@ const ImperialStats = ({ setWeight, setHeight }) => {
   return (
     <div className="imperial-stats">
       <label className="imperial-height">
-        Height
-        <br />
+        <p>Height</p>
         <div className="label-container">
           <input className="imperial-height-input" type="number" name="feet" onChange={feetChangeHandler} />
           <span className="imperial-label" id="label-left">
@@ -67,8 +66,7 @@ const ImperialStats = ({ setWeight, setHeight }) => {
       </label>
 
       <label className="imperial-weight">
-        Weight
-        <br />
+        <p>Weight</p>
         <div className="label-container">
           <input className="imperial-weight-input" type="number" name="stones" onChange={stonesChangeHandler} />
           <span className="imperial-label" id="label-left">
