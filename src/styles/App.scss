@@ -29,12 +29,16 @@ h1 {
 
     @include min-width(medium) {
         max-width: 54%;
+        font-size: 64px;
     }
 }
 
 h2 {
     font-size: 32px;
     font-weight: 600;
+    @include min-width(medium) {
+        font-size: 48px;
+    }
 }
 
 h3 {
@@ -54,4 +58,10 @@ p {
     font-weight: 400;
     color: $body;
     line-height: 24px;
+}
+
+.app {
+    @include min-width(large) {
+        position: relative;
+    }
 }

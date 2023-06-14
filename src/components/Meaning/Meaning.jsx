@@ -4,6 +4,8 @@ import eating from '../../assets/images/icon-eating.svg';
 import exercise from '../../assets/images/icon-exercise.svg';
 import sleeping from '../../assets/images/icon-sleep.svg';
 
+import curve from '../../assets/images/pattern-curved-line-left.svg';
+
 const requirements = [
   {
     requirement: 'Healthy eating',
@@ -29,7 +31,7 @@ const Meaning = () => {
   return (
     <>
     <div className="meaning-header">
-
+      <img src={curve} id="curve-l" alt="background decoration" />
       <img src={manEating} id="manEating" alt="A man eating with chopsticks" />
       <div className="whats-it-mean">
         <h2>What your BMI result means</h2>

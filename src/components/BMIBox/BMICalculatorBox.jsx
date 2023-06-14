@@ -14,7 +14,7 @@ const BMICalculatorBox = () => {
   };
 
   return (
-    <div className="bmi-box">
+    <div className={`bmi-box ${unit}-box`}>
       <h3>Enter your details below</h3>
       <div className="unit-box">
         <RadioInput unitIn="metric" setUnit={updateUnitHandler} check={unit} />

@@ -14,11 +14,16 @@
         padding: 40px;
         height: 180px;
         border-radius:  16px 85px 85px 16px;
+
+        @include min-width(large) {
+            padding: 30px;
+            height: 150px;
+        }
     }
     
     .score {
         display: block;
-        margin: 20px 0;
+        margin: 10px 0;
         font-size: 48px;
         @include min-width(medium) {
             position: absolute;
@@ -38,6 +43,10 @@
             left: 50%;
             right: 8%;
             top: 30%;
+        }
+
+        @include min-width(large) {
+            top: 25%;
         }
 
     }

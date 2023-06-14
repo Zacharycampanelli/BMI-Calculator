@@ -6,12 +6,12 @@ import Limitations from './components/Limitations/Limitations';
 
 function App() {
   return (
-    <>
+    <div className='app'>
       <Header />
       <BMICalculatorBox />
       <Meaning />
       <Limitations />
-    </>
+    </div>
   );
 }
 

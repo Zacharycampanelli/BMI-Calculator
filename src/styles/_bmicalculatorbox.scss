@@ -8,7 +8,18 @@
   box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
   background: #fff;
   text-align: center;
-  
+
+  @include min-width(medium) {
+    margin: -18rem 40px 72px;
+  }
+
+  @include min-width(large) {
+    position: absolute;
+    margin: 0;
+    top: 12vh;
+    right: 10vw;
+    width: 37vw;
+  }
 
   h3 {
     margin-left: 1rem;
@@ -16,7 +27,7 @@
 
     @include min-width(medium) {
       text-align: left;
-      margin-bottom: 2.5rem
+      margin-bottom: 2.5rem;
     }
   }
 
@@ -24,18 +35,17 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 18px;
-    
+
     @include min-width(medium) {
       justify-content: space-between;
       margin-left: 2%;
-      margin-right : 19%;
+      margin-right: 19%;
     }
   }
-
-  @include min-width(medium) {
-    margin: -18rem 40px 72px
-  }
-
 }
 
-    
+.imperial-box {
+  @include min-width(large) {
+    top: 6vh;
+  }
+}
