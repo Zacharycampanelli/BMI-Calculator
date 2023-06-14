@@ -1,19 +1,48 @@
-#manEating {
+.meaning-header {
+
+    @include min-width(medium) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+  #manEating {
     width: 100vw;
     border-radius: 32px;
-}
+   
+    @include min-width(medium) {
+        margin-left: -8vw;
+        width: 52vw;
+        height: auto;
+    }
+    
+  }
 
-.whatsItMean{
+  .whats-it-mean {
     margin: 24px;
 
-    p {
-        margin-top: 32px;
+    @include min-width(medium) {
+        margin: 0 42px 0 30px;
+        width: 42vw;
+
     }
-}
 
+    h2 {
+        @include min-width(medium) {
+            margin-top: 24px;
+        }
+    }
+
+    p {
+      margin-top: 28px;
+
+      @include min-width(medium) {
+        margin-top: 22px;
+    }
+    }
+  }
+}
 .requirements {
-    margin-top: 112px;
-    padding: 50px 0;
-    background: linear-gradient(to left, $meaning-gradient-start, $meaning-gradient-end);
+  margin-top: 60px;
+  padding: 40px 0;
+  background: linear-gradient(to left, $meaning-gradient-start, $meaning-gradient-end);
 }
-

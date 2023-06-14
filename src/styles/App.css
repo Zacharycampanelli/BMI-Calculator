@@ -308,12 +308,14 @@ blockquote:after, q:before, q:after {
 @media (min-width: 768px) {
   .bmi-score-card {
     position: relative;
-    height: 140px;
+    padding: 40px;
+    height: 180px;
     border-radius: 16px 85px 85px 16px;
   }
 }
 .bmi-score-card .score {
   display: block;
+  margin: 20px 0;
   font-size: 48px;
 }
 @media (min-width: 768px) {
@@ -331,7 +333,7 @@ blockquote:after, q:before, q:after {
   .bmi-score-card .status-range {
     position: absolute;
     left: 50%;
-    right: 5%;
+    right: 8%;
     top: 30%;
   }
 }
@@ -339,27 +341,67 @@ blockquote:after, q:before, q:after {
   font-weight: 600;
 }
 
-#manEating {
+@media (min-width: 768px) {
+  .meaning-header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.meaning-header #manEating {
   width: 100vw;
   border-radius: 32px;
 }
-
-.whatsItMean {
+@media (min-width: 768px) {
+  .meaning-header #manEating {
+    margin-left: -8vw;
+    width: 52vw;
+    height: auto;
+  }
+}
+.meaning-header .whats-it-mean {
   margin: 24px;
 }
-.whatsItMean p {
-  margin-top: 32px;
+@media (min-width: 768px) {
+  .meaning-header .whats-it-mean {
+    margin: 0 42px 0 30px;
+    width: 42vw;
+  }
+}
+@media (min-width: 768px) {
+  .meaning-header .whats-it-mean h2 {
+    margin-top: 24px;
+  }
+}
+.meaning-header .whats-it-mean p {
+  margin-top: 28px;
+}
+@media (min-width: 768px) {
+  .meaning-header .whats-it-mean p {
+    margin-top: 22px;
+  }
 }
 
 .requirements {
-  margin-top: 112px;
-  padding: 50px 0;
+  margin-top: 60px;
+  padding: 40px 0;
   background: linear-gradient(to left, hsla(216, 95%, 92%, 0.5), hsla(184, 95%, 92%, 0));
 }
 
 .requirement {
   margin: 0 20px 5px;
   padding: 30px 0 20px;
+}
+@media (min-width: 768px) {
+  .requirement {
+    display: flex;
+    margin-bottom: 0;
+    padding: 15px 0 10px;
+  }
+}
+@media (min-width: 768px) {
+  .requirement img {
+    margin: 36px;
+  }
 }
 .requirement h3, .requirement p {
   margin-top: 24px;
@@ -369,11 +411,22 @@ blockquote:after, q:before, q:after {
   text-align: center;
   margin: 72px 20px;
 }
+@media (min-width: 768px) {
+  .limits {
+    margin: 72px 40px;
+  }
+}
 .limits h2 {
   margin-bottom: 30px;
 }
 .limits p {
   margin-bottom: 56px;
+}
+.limits .individual-limits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
 .single-limit {
@@ -383,6 +436,11 @@ blockquote:after, q:before, q:after {
   background: #fff;
   box-shadow: 16px 32px 56px hsla(211, 40%, 69%, 0.25);
   text-align: left;
+}
+@media (min-width: 768px) {
+  .single-limit {
+    width: 42vw;
+  }
 }
 .single-limit p {
   margin-bottom: 12px;

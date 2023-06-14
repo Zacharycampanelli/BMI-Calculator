@@ -2,6 +2,18 @@
     margin: 0 20px 5px;
     padding: 30px 0 20px;
 
+    @include min-width(medium) {
+        display: flex;
+        margin-bottom: 0;
+        padding: 15px 0 10px;
+    }
+
+    img {
+        @include min-width(medium) {
+            margin: 36px;
+        }
+    }
+
     h3, p {
         margin-top: 24px;
     }

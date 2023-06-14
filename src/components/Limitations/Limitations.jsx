@@ -44,8 +44,10 @@ const Limitations = () => {
         groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial
         to use.
       </p>
+      <div className="individual-limits">
 
       {limitations.map((limit) => <Limit limit={limit.limit} description={limit.description} image={limit.image} key={limit.limit} />)}
+      </div>
     </div>
   );
 };

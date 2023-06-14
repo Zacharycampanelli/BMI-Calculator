@@ -1,12 +1,23 @@
 .limits {
-    text-align: center;
-    margin: 72px 20px;
+  text-align: center;
+  margin: 72px 20px;
 
-    h2 { 
-        margin-bottom: 30px;
-    }
+  @include min-width(medium) {
+    margin: 72px 40px;
+  }
 
-    p {
-        margin-bottom: 56px;
-    }
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 56px;
+  }
+
+  .individual-limits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
 }

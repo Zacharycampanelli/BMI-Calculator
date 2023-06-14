@@ -28,8 +28,10 @@ const requirements = [
 const Meaning = () => {
   return (
     <>
+    <div className="meaning-header">
+
       <img src={manEating} id="manEating" alt="A man eating with chopsticks" />
-      <div className="whatsItMean">
+      <div className="whats-it-mean">
         <h2>What your BMI result means</h2>
         <p>
           A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your
@@ -38,6 +40,7 @@ const Meaning = () => {
           regular physical activity, ideally about 30 minutes daily for five days a week.
         </p>
       </div>
+    </div>
       <div className="requirements">
         {requirements.map((item) => (
           <Requirements
