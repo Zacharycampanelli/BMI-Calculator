@@ -53,30 +53,35 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     if (30 <= bmi) return setWeightStatus('obese');
   };
 
+  const formatBMI = (num) => {
+    if (num % 1 === 0) {
+      num = num + '.0';
+    }
+    return num;
+  };
+
   // Move to imperial/metric
   useEffect(() => {
     if (weight !== 0 && height !== 0) {
-
-    
-    if (unit === 'metric') {
-      tempBMI = weight / height ** 2;
-    } else if (unit === 'imperial') {
-      tempBMI = 703 * (weight / height ** 2);
+      if (unit === 'metric') {
+        tempBMI = weight / height ** 2;
+      } else if (unit === 'imperial') {
+        tempBMI = 703 * (weight / height ** 2);
+      }
+      tempBMI = Number(tempBMI.toFixed(1));
+      setBMI(tempBMI);
+      getWeightRange(height, unit);
+      getWeightStatus(BMI);
     }
-    tempBMI = Number(tempBMI.toFixed(1));
-    setBMI(tempBMI);
-    getWeightRange(height, unit);
-    getWeightStatus(BMI);
-  }
   }, [weight, height, unit]);
 
   return (
     <div className="bmi-score-card">
       Your BMI is...
-      <span className="score">{BMI}</span>
-      <p className='status-range'>
+      <span className="score">{formatBMI(BMI)}</span>
+      <p className="status-range">
         Your BMI suggests you're {weightStatus}. Your ideal weight is between
-        <span className="range">{' ' + `${range.lower} - ${range.upper}`}.</span>
+        <span className="range">{' ' + `${range.lower} - ${range.upper}`}</span>
       </p>
     </div>
   );
