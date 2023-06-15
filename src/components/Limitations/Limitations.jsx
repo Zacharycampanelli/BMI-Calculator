@@ -5,7 +5,7 @@ import muscle from '../../assets/images/icon-muscle.svg';
 import pregnancy from '../../assets/images/icon-pregnancy.svg';
 import race from '../../assets/images/icon-race.svg';
 
-
+import curve from '../../assets/images/pattern-curved-line-right.svg'
 
 const limitations = [
     {
@@ -39,11 +39,13 @@ const Limitations = () => {
   return (
     <div className="limits">
       <h2>Limitations of BMI</h2>
-      <p>
+      <p className='limit-explanation'>
         Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific
         groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial
         to use.
       </p>
+      <img src={curve} id="curve-l" alt="background decoration" />
+
       <div className="individual-limits">
 
       {limitations.map((limit) => <Limit limit={limit.limit} description={limit.description} image={limit.image} key={limit.limit} />)}

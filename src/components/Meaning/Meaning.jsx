@@ -31,7 +31,7 @@ const Meaning = () => {
   return (
     <>
     <div className="meaning-header">
-      <img src={curve} id="curve-l" alt="background decoration" />
+      <img src={curve} id="curve-r" alt="background decoration" />
       <img src={manEating} id="manEating" alt="A man eating with chopsticks" />
       <div className="whats-it-mean">
         <h2>What your BMI result means</h2>

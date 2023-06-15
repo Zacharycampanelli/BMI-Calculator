@@ -8,13 +8,30 @@
         padding: 15px 0 10px;
     }
 
+    @include min-width(large) {
+        flex-direction: column;
+        padding: 0 0 20px 0;
+        width: 25vw;
+    }
+
     img {
         @include min-width(medium) {
             margin: 36px;
+        }
+
+        @include min-width(large) {
+           width: 4rem;
+        
         }
     }
 
     h3, p {
         margin-top: 24px;
     }
+
+    // .description {
+    //     @include min-width(large) {
+    //         display: flex;
+    //     }
+    // }
 }

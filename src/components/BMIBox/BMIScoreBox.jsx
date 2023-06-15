@@ -75,6 +75,15 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     }
   }, [weight, height, unit]);
 
+  if (BMI === 0) {
+    return (
+      <div className="bmi-score-card">
+        <h3>Welcome!</h3>
+        <p>Enter your height and weight and you’ll see your BMI result here</p>
+      </div>
+    );
+  }
+
   return (
     <div className="bmi-score-card">
       Your BMI is...

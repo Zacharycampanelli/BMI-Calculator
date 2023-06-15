@@ -1,4 +1,5 @@
 .single-limit {
+  position: absolute;
   margin: 24px 0 16px;
   padding: 24px;
   border-radius: 16px;
@@ -8,6 +9,10 @@
 
   @include min-width(medium) {
     width: 42vw;
+  }
+
+  @include min-width(large) {
+    width: 30vw;
   }
 
   p {
@@ -22,5 +27,35 @@
     .icon {
       margin-right: 15px;
     }
+  }
+}
+
+.Gender {
+  @include min-width(large) {
+    top: -2em;
+    right: 7em;
+  }
+}
+.Age {
+  @include min-width(large) {
+    top: 13.5em;
+  }
+}
+.Muscle {
+  @include min-width(large) {
+    top: 13.5em;
+    right: 0;
+  }
+}
+.Pregnancy {
+  @include min-width(large) {
+    bottom: 4.5em;
+    left: 18em;
+  }
+}
+.Race {
+  @include min-width(large) {
+    bottom: 4.5em;
+    right: 12em;
   }
 }

@@ -10,7 +10,7 @@
       align-items: center;
     }
 
-    #curve-l {
+    #curve-r {
       position: absolute;
       top: 2vh;
       right: 8vw;
@@ -65,8 +65,16 @@
     }
   }
 }
+
 .requirements {
   margin-top: 60px;
-  padding: 40px 0;
+  padding: 50px 40px;
   background: linear-gradient(to left, $meaning-gradient-start, $meaning-gradient-end);
+
+  @include min-width(large) {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px;
+    border-radius: 35px;
+  }
 }
