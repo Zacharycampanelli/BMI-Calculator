@@ -36,6 +36,11 @@
     flex-direction: row;
     margin-bottom: 18px;
 
+    .radio-input:hover {
+      border: 1px solid $deep-blue;
+      
+    }
+
     @include min-width(medium) {
       justify-content: space-between;
       margin-left: 2%;

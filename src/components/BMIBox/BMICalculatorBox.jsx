@@ -6,7 +6,7 @@ import BMIScoreBox from './BMIScoreBox';
 const BMICalculatorBox = () => {
   const [unit, setUnit] = useState('metric');
   const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(0); 
   const [BMI, setBMI] = useState(0.0);
 
   const updateUnitHandler = (e) => {
@@ -17,8 +17,8 @@ const BMICalculatorBox = () => {
     <div className={`bmi-box ${unit}-box`}>
       <h3>Enter your details below</h3>
       <div className="unit-box">
-        <RadioInput unitIn="metric" setUnit={updateUnitHandler} check={unit} />
-        <RadioInput unitIn="imperial" setUnit={updateUnitHandler} check={unit} />
+        <RadioInput className="radio-input" unitIn="metric" setUnit={updateUnitHandler} check={unit} />
+        <RadioInput className="radio-input" unitIn="imperial" setUnit={updateUnitHandler} check={unit} />
       </div>
       <StatsInput
         unit={unit}

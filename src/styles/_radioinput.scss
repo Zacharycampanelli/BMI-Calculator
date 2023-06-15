@@ -20,6 +20,10 @@
     input {
       display: none;
 
+      &:active {
+        border: 1px solid $deep-blue;
+      }
+
       &:checked {
         & + .circle {
           border: none;
@@ -51,5 +55,11 @@
       border: 1px solid $very-light-gray;
       border-radius: 50%;
       background-color: #fff;
+
+      &:hover {
+        border: 1px solid $deep-blue;
+      }
     }
+
+
   }
