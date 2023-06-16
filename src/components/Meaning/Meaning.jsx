@@ -3,7 +3,6 @@ import manEating from '../../assets/images/image-man-eating.webp';
 import eating from '../../assets/images/icon-eating.svg';
 import exercise from '../../assets/images/icon-exercise.svg';
 import sleeping from '../../assets/images/icon-sleep.svg';
-s;
 import curve from '../../assets/images/pattern-curved-line-left.svg';
 
 const requirements = [
