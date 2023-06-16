@@ -73,7 +73,7 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
       getWeightRange(height, unit);
       getWeightStatus(BMI);
     }
-  }, [weight, height, unit]);
+  }, [weight, height, unit, BMI]);
 
   if (BMI === 0) {
     return (

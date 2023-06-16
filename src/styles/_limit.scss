@@ -1,6 +1,5 @@
 .single-limit {
-  position: absolute;
-  margin: 24px 0 16px;
+  margin: 24px 0 2px;
   padding: 24px;
   border-radius: 16px;
   background: #fff;
@@ -12,6 +11,7 @@
   }
 
   @include min-width(large) {
+    position: absolute;
     width: 30vw;
   }
 
@@ -49,13 +49,13 @@
 }
 .Pregnancy {
   @include min-width(large) {
-    bottom: 4.5em;
-    left: 18em;
+    top: 27em;
+    left: 17em;
   }
 }
 .Race {
   @include min-width(large) {
-    bottom: 4.5em;
-    right: 12em;
+    top: 27em;
+    right: 11em;
   }
 }

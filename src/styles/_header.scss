@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  height: 55rem;
+  height: 45rem;
   padding: 32px 24px;
   border-radius: 0 0 50px 50px;
   background: linear-gradient(to left, $gradient-start, $gradient-end);
@@ -15,7 +15,7 @@
     flex-direction: column;
     align-content: flex-start;
     width: 68vw;
-    height: 59vh;
+    height: 44em;
     
     img {
         margin-left: 7vw;
@@ -31,7 +31,7 @@
     @include min-width(large) {
         margin: 72px 7vw 0 ;
         text-align: left;
-        width: 54%;
+        width: 55%;
 
     }
   }

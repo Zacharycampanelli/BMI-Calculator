@@ -1,15 +1,17 @@
 .limits {
   position: relative;
   margin: 72px 20px;
-  height: 64vh;
+  height: 180vh;
   text-align: center;
-
+  
   @include min-width(medium) {
     margin: 72px 40px;
+    height: 124vh;
   }
 
   @include min-width(large) {
     margin: 100px 40px 70px;
+    height: 70vh;
   }
 
   h2 {
@@ -29,6 +31,12 @@
   #curve-l {
     position: absolute;
     left: 15em;
+    display: none;
+
+    @include min-width(large) {
+      display: block;
+    }
+
   }
 
   .limit-explanation {

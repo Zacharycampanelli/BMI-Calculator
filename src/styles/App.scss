@@ -28,7 +28,11 @@ h1 {
     color: $heading;
 
     @include min-width(medium) {
-        max-width: 54%;
+        width: 54%;
+    }
+
+    @include min-width(large) {
+        width: 71%;
         font-size: 64px;
     }
 }
@@ -36,7 +40,7 @@ h1 {
 h2 {
     font-size: 32px;
     font-weight: 600;
-    @include min-width(medium) {
+    @include min-width(large) {
         font-size: 48px;
     }
 }
@@ -61,6 +65,7 @@ p {
 }
 
 .app {
+    // padding-bottom: 100vh;
     @include min-width(large) {
         position: relative;
     }
