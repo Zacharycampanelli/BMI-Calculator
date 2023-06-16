@@ -1,12 +1,12 @@
 import Header from './components/Header';
 import BMICalculatorBox from './components/BMIBox/BMICalculatorBox';
 import Meaning from './components/Meaning/Meaning';
-import './styles/App.scss';
 import Limitations from './components/Limitations/Limitations';
+import './styles/App.scss';
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
       <Header />
       <BMICalculatorBox />
       <Meaning />

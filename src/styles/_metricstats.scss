@@ -9,8 +9,8 @@
     width: 100%;
   }
 
-
-  .metric-height, .metric-weight {    
+  .metric-height,
+  .metric-weight {
     position: relative;
     margin-bottom: 14px;
     font-size: 14px;
@@ -21,9 +21,6 @@
       @include min-width(medium) {
         margin: 1rem;
       }
-
-
-
     }
 
     &-input {
@@ -40,8 +37,7 @@
       @include min-width(medium) {
         margin: 10px auto 0;
         padding: 15px;
-        width: 92%; 
-        
+        width: 92%;
       }
     }
 

@@ -7,7 +7,7 @@
     margin: 0 auto;
     width: 95%;
   }
-  
+
   .imperial-height,
   .imperial-weight {
     display: block;
@@ -28,7 +28,6 @@
       border-radius: 12px;
       font-size: 24px;
       font-weight: 600;
-      
 
       @include min-width(medium) {
         width: 46%;
@@ -56,11 +55,11 @@
         left: 6rem;
 
         @include min-width(medium) {
-          left: 14.5rem
+          left: 14.5rem;
         }
 
         @include min-width(large) {
-          left: 10.5rem
+          left: 10.5rem;
         }
       }
 

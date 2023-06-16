@@ -60,7 +60,6 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
     return num;
   };
 
-  // Move to imperial/metric
   useEffect(() => {
     if (weight !== 0 && height !== 0) {
       if (unit === 'metric') {

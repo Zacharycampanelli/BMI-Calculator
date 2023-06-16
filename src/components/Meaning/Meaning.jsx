@@ -3,7 +3,7 @@ import manEating from '../../assets/images/image-man-eating.webp';
 import eating from '../../assets/images/icon-eating.svg';
 import exercise from '../../assets/images/icon-exercise.svg';
 import sleeping from '../../assets/images/icon-sleep.svg';
-
+s;
 import curve from '../../assets/images/pattern-curved-line-left.svg';
 
 const requirements = [
@@ -30,19 +30,19 @@ const requirements = [
 const Meaning = () => {
   return (
     <>
-    <div className="meaning-header">
-      <img src={curve} id="curve-r" alt="background decoration" />
-      <img src={manEating} id="manEating" alt="A man eating with chopsticks" />
-      <div className="whats-it-mean">
-        <h2>What your BMI result means</h2>
-        <p>
-          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your
-          chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet
-          with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for
-          regular physical activity, ideally about 30 minutes daily for five days a week.
-        </p>
+      <div className="meaning-header">
+        <img src={curve} id="curve-r" alt="background decoration" />
+        <img src={manEating} id="manEating" alt="A man eating with chopsticks" />
+        <div className="whats-it-mean">
+          <h2>What your BMI result means</h2>
+          <p>
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your
+            chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious
+            diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for
+            regular physical activity, ideally about 30 minutes daily for five days a week.
+          </p>
+        </div>
       </div>
-    </div>
       <div className="requirements">
         {requirements.map((item) => (
           <Requirements

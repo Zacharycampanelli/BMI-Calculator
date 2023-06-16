@@ -16,57 +16,55 @@
 $inter: 'Inter', sans-serif;
 
 body {
-    box-sizing: border-box;
-    font-family: $inter;
-    font-size: 16px;
-    font-weight: normal;
+  box-sizing: border-box;
+  font-family: $inter;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 600;
-    color: $heading;
+  font-size: 48px;
+  font-weight: 600;
+  color: $heading;
 
-    @include min-width(medium) {
-        width: 54%;
-    }
+  @include min-width(medium) {
+    width: 54%;
+  }
 
-    @include min-width(large) {
-        width: 71%;
-        font-size: 64px;
-    }
+  @include min-width(large) {
+    width: 71%;
+    font-size: 64px;
+  }
 }
 
 h2 {
-    font-size: 32px;
-    font-weight: 600;
-    @include min-width(large) {
-        font-size: 48px;
-    }
+  font-size: 32px;
+  font-weight: 600;
+  @include min-width(large) {
+    font-size: 48px;
+  }
 }
 
 h3 {
-    font-size: 24px;
-    font-weight: 600;
-    color: $heading;
+  font-size: 24px;
+  font-weight: 600;
+  color: $heading;
 }
 
 h4 {
-    font-size:20px;
-    font-weight: 600;
-    color: $heading;
+  font-size: 20px;
+  font-weight: 600;
+  color: $heading;
 }
 
 p {
-    // font-size: 16px;
-    font-weight: 400;
-    color: $body;
-    line-height: 24px;
+  font-weight: 400;
+  color: $body;
+  line-height: 24px;
 }
 
 .app {
-    // padding-bottom: 100vh;
-    @include min-width(large) {
-        position: relative;
-    }
+  @include min-width(large) {
+    position: relative;
+  }
 }

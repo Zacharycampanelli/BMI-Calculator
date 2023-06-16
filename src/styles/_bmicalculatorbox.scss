@@ -38,7 +38,6 @@
 
     .radio-input:hover {
       border: 1px solid $deep-blue;
-      
     }
 
     @include min-width(medium) {
@@ -48,18 +47,20 @@
     }
   }
 
-
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: $heading;
     opacity: 0.25; /* Firefox */
   }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: $heading;
     opacity: 0.25;
   }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: $heading;
     opacity: 0.25;
   }

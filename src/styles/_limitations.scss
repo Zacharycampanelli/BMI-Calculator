@@ -46,7 +46,6 @@
         width: 35vw;
         text-align: left;
       }
-    
   }
 
   .individual-limits {
@@ -54,9 +53,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-  }
-  @include min-width(large) {
-
   }
 }
 

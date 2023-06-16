@@ -1,64 +1,59 @@
 .meaning-header {
+  @include min-width(medium) {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    @include min-width(medium) {
-        display: flex;
-        justify-content: space-between;
-    }
+  @include min-width(large) {
+    position: relative;
+    align-items: center;
+  }
 
-    @include min-width(large) {
-      position: relative;
-      align-items: center;
-    }
-
-    #curve-r {
-      position: absolute;
-      top: 2vh;
-      right: 8vw;
-      display: none;
+  #curve-r {
+    position: absolute;
+    top: 2vh;
+    right: 8vw;
+    display: none;
 
     @include min-width(large) {
       display: block;
     }
-    }
-
+  }
 
   #manEating {
     width: 100vw;
     border-radius: 32px;
-   
+
     @include min-width(medium) {
-        margin-left: -8vw;
-        width: 52vw;
-        height: auto;
+      margin-left: -8vw;
+      width: 52vw;
+      height: auto;
     }
-   
+
     @include min-width(large) {
-        margin: 6vh 7vw;
-        width: 42vw;
-        height: auto;
+      margin: 6vh 7vw;
+      width: 42vw;
+      height: auto;
     }
-    
   }
 
   .whats-it-mean {
     margin: 24px;
 
     @include min-width(medium) {
-        margin: 0 42px 0 30px;
-        width: 43vw;
-
+      margin: 0 42px 0 30px;
+      width: 43vw;
     }
 
     @include min-width(large) {
-        margin: 7vw 7vw 0 30px;
-        width: 42vw;
-
+      margin: 7vw 7vw 0 30px;
+      width: 42vw;
     }
 
     h2 {
-        @include min-width(medium) {
-            margin-top: 24px;
-        }
+      @include min-width(medium) {
+        margin-top: 24px;
+      }
     }
 
     p {
@@ -66,7 +61,7 @@
 
       @include min-width(medium) {
         margin-top: 22px;
-    }
+      }
     }
   }
 }

@@ -3,19 +3,19 @@ $breakpoint-medium: 768px;
 $breakpoint-large: 1440px;
 
 @mixin min-width($breakpoint) {
-    @if ($breakpoint == small) {
-      @media (min-width: $breakpoint-small) {
-        @content;
-      }
-    } @else if ($breakpoint == medium) {
-      @media (min-width: $breakpoint-medium) {
-        @content;
-      }
-    } @else if ($breakpoint == large) {
-      @media (min-width: $breakpoint-large) {
-        @content;
-      }
-   } @else {
-      @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  @if ($breakpoint == small) {
+    @media (min-width: $breakpoint-small) {
+      @content;
     }
+  } @else if ($breakpoint == medium) {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if ($breakpoint == large) {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
   }
+}

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const MetricStats = ({ setWeight, setHeight }) => {
   const inputHeightHandler = (e) => {
     let tempHeight = parseInt(e.target.value);
@@ -14,12 +12,12 @@ const MetricStats = ({ setWeight, setHeight }) => {
     <div className="metric-stats">
       <label className="metric-height">
         <p>Height</p>
-        <input className="metric-height-input" type="number" placeholder='0' onChange={inputHeightHandler} />
+        <input className="metric-height-input" type="number" placeholder="0" onChange={inputHeightHandler} />
         <span className="metric-label">cm</span>
       </label>
       <label className="metric-weight">
         <p>Weight</p>
-        <input className="metric-weight-input" type="number" placeholder='0' onChange={inputWeightHandler} />
+        <input className="metric-weight-input" type="number" placeholder="0" onChange={inputWeightHandler} />
         <span className="metric-label">kg</span>
       </label>
     </div>

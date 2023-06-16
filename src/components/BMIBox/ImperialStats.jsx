@@ -54,11 +54,23 @@ const ImperialStats = ({ setWeight, setHeight }) => {
       <label className="imperial-height">
         <p>Height</p>
         <div className="label-container">
-          <input className="imperial-height-input" type="number" name="feet" placeholder='0' onChange={feetChangeHandler} />
+          <input
+            className="imperial-height-input"
+            type="number"
+            name="feet"
+            placeholder="0"
+            onChange={feetChangeHandler}
+          />
           <span className="imperial-label" id="label-left">
             ft
           </span>
-          <input className="imperial-height-input" type="number" name="inches" placeholder='0' onChange={inchesChangeHandler} />
+          <input
+            className="imperial-height-input"
+            type="number"
+            name="inches"
+            placeholder="0"
+            onChange={inchesChangeHandler}
+          />
           <span className="imperial-label" id="label-right">
             in
           </span>
@@ -68,11 +80,23 @@ const ImperialStats = ({ setWeight, setHeight }) => {
       <label className="imperial-weight">
         <p>Weight</p>
         <div className="label-container">
-          <input className="imperial-weight-input" type="number" name="stones" placeholder='0' onChange={stonesChangeHandler} />
+          <input
+            className="imperial-weight-input"
+            type="number"
+            name="stones"
+            placeholder="0"
+            onChange={stonesChangeHandler}
+          />
           <span className="imperial-label" id="label-left">
             st
           </span>
-          <input className="imperial-weight-input" type="number" name="pounds" placeholder='0' onChange={poundsChangeHandler} />
+          <input
+            className="imperial-weight-input"
+            type="number"
+            name="pounds"
+            placeholder="0"
+            onChange={poundsChangeHandler}
+          />
           <span className="imperial-label" id="label-right">
             lbs
           </span>

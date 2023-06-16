@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Limit = ({ limit, description, image }) => {
   return (
     <div className={`single-limit ${limit}`} >

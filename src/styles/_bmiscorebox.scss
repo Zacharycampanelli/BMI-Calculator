@@ -1,68 +1,66 @@
 .bmi-score-card {
-    margin: 10px auto;
-    padding: 32px 55px 32px 32px;
-    border-radius: 16px;
-    background: linear-gradient($deep-blue, $deep-blue-gradient);
-    font-weight: 600;
+  margin: 10px auto;
+  padding: 32px 55px 32px 32px;
+  border-radius: 16px;
+  background: linear-gradient($deep-blue, $deep-blue-gradient);
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+
+  h3 {
+    padding-top: 8px;
+    margin-left: 0;
+    margin-bottom: 1em;
     color: #fff;
-    text-align: left;
-    width: 100%;
-    
-    h3 {
-        padding-top: 8px;
-        margin-left: 0;
-        margin-bottom: 1em;
-        color: #fff;
-    }
+  }
 
-    p {
-        padding-bottom: 8px;
-    }
+  p {
+    padding-bottom: 8px;
+  }
 
+  @include min-width(medium) {
+    position: relative;
+    padding: 40px;
+    height: 180px;
+    border-radius: 16px 85px 85px 16px;
+
+    @include min-width(large) {
+      padding: 30px;
+      height: 150px;
+    }
+  }
+
+  .score {
+    display: block;
+    margin: 10px 0;
+    font-size: 48px;
     @include min-width(medium) {
-        position: relative;
-        padding: 40px;
-        height: 180px;
-        border-radius:  16px 85px 85px 16px;
-
-        @include min-width(large) {
-            padding: 30px;
-            height: 150px;
-        }
+      position: absolute;
     }
-    
-    .score {
-        display: block;
-        margin: 10px 0;
-        font-size: 48px;
-        @include min-width(medium) {
-            position: absolute;
-        }
-    }
+  }
 
-    p {
-        font-size: 14px;
-        font-weight: 400;
-        color: #fff;
-        line-height: 21px;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 21px;
+  }
+
+  .status-range {
+    @include min-width(medium) {
+      position: absolute;
+      left: 50%;
+      right: 8%;
+      top: 30%;
     }
 
-    .status-range {
-        @include min-width(medium) {
-            position: absolute;
-            left: 50%;
-            right: 8%;
-            top: 30%;
-        }
-
-        @include min-width(large) {
-            top: 25%;
-        }
-
+    @include min-width(large) {
+      top: 25%;
     }
+  }
 
-    .range {
-        font-weight: 600;
-    }
-
+  .range {
+    font-weight: 600;
+  }
 }

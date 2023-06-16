@@ -1,65 +1,62 @@
 .unit {
-    position: relative;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 10px 40px;
-    padding-left: 40px;
-    transform: translateX(-35px);
-    user-select: none;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 40px;
+  padding-left: 40px;
+  transform: translateX(-35px);
+  user-select: none;
+  cursor: pointer;
 
-    @include min-width(medium) {
-      margin: 0 40px;
+  @include min-width(medium) {
+    margin: 0 40px;
+  }
+
+  label {
+    margin-top: 20px;
+  }
+
+  input {
+    display: none;
+
+    &:active {
+      border: 1px solid $deep-blue;
     }
 
-    label {
-      margin-top: 20px;
-    }
+    &:checked {
+      & + .circle {
+        border: none;
+        background-color: $deep-blue-transparent;
 
-    input {
-      display: none;
-
-      &:active {
-        border: 1px solid $deep-blue;
-      }
-
-      &:checked {
-        & + .circle {
-          border: none;
-          background-color: $deep-blue-transparent;
-
-          &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: $deep-blue;
-            transform: translate(-50%, -50%);
-          }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: $deep-blue;
+          transform: translate(-50%, -50%);
         }
       }
     }
-
-    // Unchecked circle
-    .circle {
-      position: absolute;
-      top: -12%;
-      left: 0;
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border: 1px solid $very-light-gray;
-      border-radius: 50%;
-      background-color: #fff;
-
-      &:hover {
-        border: 1px solid $deep-blue;
-      }
-    }
-
-
   }
+
+  .circle {
+    position: absolute;
+    top: -12%;
+    left: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $very-light-gray;
+    border-radius: 50%;
+    background-color: #fff;
+
+    &:hover {
+      border: 1px solid $deep-blue;
+    }
+  }
+}
