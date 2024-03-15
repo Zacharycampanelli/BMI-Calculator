@@ -9,7 +9,7 @@ const BMICalculatorBox = () => {
   const [height, setHeight] = useState(0);
   const [BMI, setBMI] = useState(0.0);
 
-  const updateUnitHandler = (e) => {
+  const updateUnitHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUnit(e.target.value);
   };
 
@@ -24,10 +24,6 @@ const BMICalculatorBox = () => {
         unit={unit}
         setWeight={setWeight}
         setHeight={setHeight}
-        height={height}
-        weight={weight}
-        BMI={BMI}
-        setBMI={setBMI}
       />
       <BMIScoreBox weight={weight} height={height} unit={unit} BMI={BMI} setBMI={setBMI} />
     </div>

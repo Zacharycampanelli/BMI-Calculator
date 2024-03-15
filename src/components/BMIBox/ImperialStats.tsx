@@ -1,7 +1,19 @@
 import { useEffect, useState } from 'react';
 
-const ImperialStats = ({ setWeight, setHeight }) => {
-  const [measurements, setMeasurements] = useState({
+interface ImperialStatsParams {
+  setWeight: React.Dispatch<React.SetStateAction<number>>;
+  setHeight: React.Dispatch<React.SetStateAction<number>>;
+}
+
+interface Measurement {
+  inches: number;
+  feet: number;
+  pounds: number;
+  stones: number;
+}
+
+const ImperialStats: React.FC<ImperialStatsParams> = ({ setWeight, setHeight}) => {
+  const [measurements, setMeasurements] = useState<Measurement>({
     inches: 0,
     feet: 0,
     pounds: 0,
@@ -16,33 +28,16 @@ const ImperialStats = ({ setWeight, setHeight }) => {
   };
 
   const convertWeight = () => {
-    const convertedStones = parseInt(measurements.stones);
-    const convertedPounds = parseInt(measurements.pounds);
+    const convertedStones = measurements.stones;
+    const convertedPounds = measurements.pounds;
     const total = convertedStones * 14 + convertedPounds;
     setWeight(total);
   };
 
-  const feetChangeHandler = (e) => {
-    const name = e.target.name;
-    const feetValue = Number(e.target.value);
-    setMeasurements({ ...measurements, feet: feetValue });
-  };
-  const inchesChangeHandler = (e) => {
-    const name = e.target.name;
-    const inchValue = Number(e.target.value);
-    setMeasurements({ ...measurements, inches: inchValue });
-  };
-
-  const stonesChangeHandler = (e) => {
-    const name = e.target.name;
-    const stoneValue = Number(e.target.value);
-    setMeasurements({ ...measurements, stones: stoneValue });
-  };
-  const poundsChangeHandler = (e) => {
-    const name = e.target.name;
-    const poundsValue = Number(e.target.value);
-    setMeasurements({ ...measurements, pounds: poundsValue });
-  };
+  const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>, type: string) => {
+    const value = Number(e.target.value);
+    setMeasurements({ ...measurements, [type]: value });
+  }
 
   useEffect(() => {
     convertHeight();
@@ -59,7 +54,7 @@ const ImperialStats = ({ setWeight, setHeight }) => {
             type="number"
             name="feet"
             placeholder="0"
-            onChange={feetChangeHandler}
+            onChange={(e) => inputChangeHandler(e, 'feet')}
           />
           <span className="imperial-label" id="label-left">
             ft
@@ -69,7 +64,7 @@ const ImperialStats = ({ setWeight, setHeight }) => {
             type="number"
             name="inches"
             placeholder="0"
-            onChange={inchesChangeHandler}
+            onChange={(e) => inputChangeHandler(e, 'inches')}
           />
           <span className="imperial-label" id="label-right">
             in
@@ -85,7 +80,7 @@ const ImperialStats = ({ setWeight, setHeight }) => {
             type="number"
             name="stones"
             placeholder="0"
-            onChange={stonesChangeHandler}
+            onChange={(e) => inputChangeHandler(e, 'stones')}
           />
           <span className="imperial-label" id="label-left">
             st
@@ -95,7 +90,7 @@ const ImperialStats = ({ setWeight, setHeight }) => {
             type="number"
             name="pounds"
             placeholder="0"
-            onChange={poundsChangeHandler}
+            onChange={(e) => inputChangeHandler(e, 'pounds')}
           />
           <span className="imperial-label" id="label-right">
             lbs

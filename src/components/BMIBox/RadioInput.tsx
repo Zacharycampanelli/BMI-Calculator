@@ -1,4 +1,11 @@
-const RadioInput = ({ unitIn, setUnit, check }) => {
+interface RadioInputProps {
+  className: string;
+  unitIn: string;
+  setUnit: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  check: string;
+}
+
+const RadioInput:React.FC<RadioInputProps> = ({ className, unitIn, setUnit, check }) => {
   return (
     <label htmlFor={unitIn} className="unit">
       {unitIn.charAt(0).toUpperCase() + unitIn.slice(1)}

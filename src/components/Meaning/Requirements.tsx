@@ -1,4 +1,10 @@
-const Requirements = ({ requirement, description, icon }) => {
+interface RequirementProps {
+  requirement: string,
+  description: string,
+  icon: string;
+}
+
+const Requirements:React.FC<RequirementProps> = ({ requirement, description, icon }) => {
   return (
     <div className="requirement">
       <img src={icon} alt={icon} />

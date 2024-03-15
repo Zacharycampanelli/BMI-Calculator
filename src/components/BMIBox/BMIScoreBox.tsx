@@ -1,6 +1,14 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
+interface BMIScoreBoxProps {
+  weight: number,
+  height: number,
+  unit: string,
+  BMI: number,
+  setBMI: React.Dispatch<React.SetStateAction<number>>
+};
+
+const BMIScoreBox: React.FC<BMIScoreBoxProps> = ({ weight, height, unit, BMI, setBMI }) => {
   const [weightStatus, setWeightStatus] = useState('');
   const [range, setRange] = useState({
     lower: 0,
@@ -9,7 +17,7 @@ const BMIScoreBox = ({ weight, height, unit, BMI, setBMI }) => {
 
   let tempBMI = 0;
 
-  const convertWeight = (weight, unit) => {
+  const convertWeight = (weight: number, unit: string) => {
     let tempWeight;
     if (unit === 'metric') {
       tempWeight = weight.toFixed(1);
