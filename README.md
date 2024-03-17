@@ -50,6 +50,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - Sass
+- TypeScript
 - [React](https://reactjs.org/) - JS library
 
 ## Author

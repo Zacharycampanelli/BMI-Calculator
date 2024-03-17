@@ -8,11 +8,17 @@ interface BMIScoreBoxProps {
   setBMI: React.Dispatch<React.SetStateAction<number>>
 };
 
+interface Range {
+  lower: string,
+  upper: string
+};
+
+
 const BMIScoreBox: React.FC<BMIScoreBoxProps> = ({ weight, height, unit, BMI, setBMI }) => {
   const [weightStatus, setWeightStatus] = useState('');
-  const [range, setRange] = useState({
-    lower: 0,
-    upper: 0,
+  const [range, setRange] = useState<Range>({
+    lower: '',
+    upper: '',
   });
 
   let tempBMI = 0;
@@ -34,38 +40,34 @@ const BMIScoreBox: React.FC<BMIScoreBoxProps> = ({ weight, height, unit, BMI, se
     return tempWeight;
   };
 
-  const getWeightRange = (height, unit) => {
+  const getWeightRange = (height: number, unit: string) => {
     let lowerLimit = 18.5;
     let upperLimit = 24.9;
     let lowerBase = lowerLimit * height ** 2;
     let upperBase = upperLimit * height ** 2;
+    let lowerString, upperString;
     if (unit === 'imperial') {
       lowerBase = lowerBase / 703;
       upperBase = upperBase / 703;
-      lowerBase = convertWeight(lowerBase, 'imperial');
-      upperBase = convertWeight(upperBase, 'imperial');
+      lowerString = convertWeight(lowerBase, 'imperial');
+      upperString = convertWeight(upperBase, 'imperial');
     }
 
     if (unit === 'metric') {
-      lowerBase = convertWeight(lowerBase, 'metric');
-      upperBase = convertWeight(upperBase, 'metric');
+      lowerString = convertWeight(lowerBase, 'metric');
+      upperString = convertWeight(upperBase, 'metric');
     }
 
-    setRange({ lower: lowerBase, upper: upperBase });
+    if (lowerString && upperString) {
+      setRange({ lower: lowerString, upper: upperString });
+    }
   };
 
-  const getWeightStatus = (bmi) => {
+  const getWeightStatus = (bmi: number) => {
     if (bmi < 18.5) return setWeightStatus('underweight');
     if (bmi < 24.9) return setWeightStatus('a healthy weight');
     if (bmi < 29.9) return setWeightStatus('overweight');
     if (30 <= bmi) return setWeightStatus('obese');
-  };
-
-  const formatBMI = (num) => {
-    if (num % 1 === 0) {
-      num = num + '.0';
-    }
-    return num;
   };
 
   useEffect(() => {
@@ -94,7 +96,7 @@ const BMIScoreBox: React.FC<BMIScoreBoxProps> = ({ weight, height, unit, BMI, se
   return (
     <div className="bmi-score-card">
       Your BMI is...
-      <span className="score">{formatBMI(BMI)}</span>
+      <span className="score">{BMI}</span>
       <p className="status-range">
         Your BMI suggests you're {weightStatus}. Your ideal weight is between
         <span className="range">{' ' + `${range.lower} - ${range.upper}`}</span>
